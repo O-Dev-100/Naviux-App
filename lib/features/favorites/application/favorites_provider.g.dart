@@ -6,11 +6,12 @@ part of 'favorites_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$favoritesHash() => r'60bfbba3333fa28625beb5c77c9e9836b2263361';
+String _$favoritesHash() => r'c7b92befd43921c3e53a88a8276f13296f8f2e3f';
 
 /// See also [Favorites].
 @ProviderFor(Favorites)
-final favoritesProvider = NotifierProvider<Favorites, List<Product>>.internal(
+final favoritesProvider =
+    NotifierProvider<Favorites, List<ProductModel>>.internal(
   Favorites.new,
   name: r'favoritesProvider',
   debugGetCreateSourceHash:
@@ -19,6 +20,6 @@ final favoritesProvider = NotifierProvider<Favorites, List<Product>>.internal(
   allTransitiveDependencies: null,
 );
 
-typedef _$Favorites = Notifier<List<Product>>;
+typedef _$Favorites = Notifier<List<ProductModel>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

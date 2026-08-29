@@ -6,7 +6,7 @@ part of 'mock_repository.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$mockRepositoryHash() => r'5c37277edad349511c3d7a31efbb5572e65138f8';
+String _$mockRepositoryHash() => r'145b1ec1582c264d0501e1a4f7d846473872bbf4';
 
 /// See also [MockRepository].
 @ProviderFor(MockRepository)

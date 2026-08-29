@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String text;
   final IconData? icon;
   final bool isPrimary;
@@ -9,7 +9,7 @@ class AppButton extends StatelessWidget {
 
   const AppButton({
     super.key,
-    required this.onPressed,
+    this.onPressed,
     required this.text,
     this.icon,
     this.isPrimary = true,

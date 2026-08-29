@@ -6,5 +6,11 @@
   "homeProducts": "Productos Destacados",
   "shopTitle": "Catálogo",
   "favoritesTitle": "Favoritos",
-  "contactTitle": "Contacto"
+  "contactTitle": "Contacto",
+  "drawerHome": "Inicio",
+  "drawerShop": "Tienda",
+  "drawerPharmacy": "Farmacia",
+  "drawerAbout": "Sobre Nosotros",
+  "drawerContact": "Contacto",
+  "drawerLogin": "Login"
 }

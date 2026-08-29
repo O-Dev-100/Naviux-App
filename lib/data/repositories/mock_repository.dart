@@ -13,7 +13,7 @@ class MockRepository extends _$MockRepository {
         name: 'Gafas de Sol Aviator',
         description: 'Clásico diseño de aviador con protección UV400.',
         price: 120.0,
-        imageUrl: 'assets/images/logo-naviux.jpg', // Placeholder
+        imageUrl: 'assets/images/logo_naviux_.png', // Placeholder
         category: 'sol',
       ),
       Product(
@@ -21,7 +21,7 @@ class MockRepository extends _$MockRepository {
         name: 'Gafas Graduadas Minimal',
         description: 'Montura ligera y resistente para el día a día.',
         price: 95.0,
-        imageUrl: 'assets/images/logo-naviux.jpg',
+        imageUrl: 'assets/images/logo_naviux_.png',
         category: 'graduadas',
       ),
       Product(
@@ -29,7 +29,7 @@ class MockRepository extends _$MockRepository {
         name: 'Gafas de Sol Sport',
         description: 'Perfectas para actividades al aire libre.',
         price: 85.0,
-        imageUrl: 'assets/images/logo-naviux.jpg',
+        imageUrl: 'assets/images/logo_naviux_.png',
         category: 'sol',
       ),
        Product(
@@ -37,7 +37,7 @@ class MockRepository extends _$MockRepository {
         name: 'Gafas Graduadas Retro',
         description: 'Estilo vintage con materiales modernos.',
         price: 110.0,
-        imageUrl: 'assets/images/logo-naviux.jpg',
+        imageUrl: 'assets/images/logo_naviux_.png',
         category: 'graduadas',
       ),
     ];

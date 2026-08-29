@@ -13,7 +13,7 @@ class HeroBanner extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         image: const DecorationImage(
-          image: AssetImage('assets/images/logo-naviux.jpg'),
+          image: AssetImage('assets/images/logo_naviux_.png'),
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(
             Colors.black45, // Darken image slightly for text readability
@@ -72,7 +72,7 @@ class HeroBanner extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.accent,
+                    backgroundColor: AppColors.secondary,
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),

@@ -28,4 +28,22 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get contactTitle => 'Contacto';
+
+  @override
+  String get drawerHome => 'Inicio';
+
+  @override
+  String get drawerShop => 'Tienda';
+
+  @override
+  String get drawerPharmacy => 'Farmacia';
+
+  @override
+  String get drawerAbout => 'Sobre Nosotros';
+
+  @override
+  String get drawerContact => 'Contacto';
+
+  @override
+  String get drawerLogin => 'Login';
 }

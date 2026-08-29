@@ -141,6 +141,42 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Contacto'**
   String get contactTitle;
+
+  /// No description provided for @drawerHome.
+  ///
+  /// In es, this message translates to:
+  /// **'Inicio'**
+  String get drawerHome;
+
+  /// No description provided for @drawerShop.
+  ///
+  /// In es, this message translates to:
+  /// **'Tienda'**
+  String get drawerShop;
+
+  /// No description provided for @drawerPharmacy.
+  ///
+  /// In es, this message translates to:
+  /// **'Farmacia'**
+  String get drawerPharmacy;
+
+  /// No description provided for @drawerAbout.
+  ///
+  /// In es, this message translates to:
+  /// **'Sobre Nosotros'**
+  String get drawerAbout;
+
+  /// No description provided for @drawerContact.
+  ///
+  /// In es, this message translates to:
+  /// **'Contacto'**
+  String get drawerContact;
+
+  /// No description provided for @drawerLogin.
+  ///
+  /// In es, this message translates to:
+  /// **'Login'**
+  String get drawerLogin;
 }
 
 class _AppLocalizationsDelegate

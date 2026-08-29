@@ -6,5 +6,11 @@
   "homeProducts": "Productes Destacats",
   "shopTitle": "Catàleg",
   "favoritesTitle": "Favorits",
-  "contactTitle": "Contacte"
+  "contactTitle": "Contacte",
+  "drawerHome": "Inici",
+  "drawerShop": "Botiga",
+  "drawerPharmacy": "Farmàcia",
+  "drawerAbout": "Sobre Nosaltres",
+  "drawerContact": "Contacte",
+  "drawerLogin": "Login"
 }

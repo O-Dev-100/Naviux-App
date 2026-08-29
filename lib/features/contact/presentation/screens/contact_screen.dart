@@ -4,6 +4,7 @@ import '../../../../shared/widgets/app_button.dart';
 import '../../../../core/constants/app_constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:naviux_app/l10n/app_localizations.dart';
+import '../../../../shared/widgets/main_drawer.dart';
 
 class ContactScreen extends StatelessWidget {
   const ContactScreen({super.key});
@@ -20,6 +21,7 @@ class ContactScreen extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
+      drawer: const MainDrawer(),
       appBar: CustomAppBar(title: l10n.contactTitle, showBackButton: false),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24.0),
@@ -37,25 +39,20 @@ class ContactScreen extends StatelessWidget {
             ),
             const SizedBox(height: 32),
             _ContactCard(
-              title: 'WhatsApp (Soporte 1)',
+              title: 'WhatsApp (Soporte)',
               subtitle: AppContactInfo.whatsapp1,
-              icon: Icons.chat,
+              iconPath: 'assets/images/iconos/ic_contacto_whatsapp_.webp',
+              color: Colors.green,
               onTap: () =>
                   _launchUrl('https://wa.me/34${AppContactInfo.whatsapp1}'),
-            ),
-            const SizedBox(height: 16),
-            _ContactCard(
-              title: 'WhatsApp (Soporte 2)',
-              subtitle: AppContactInfo.whatsapp2,
-              icon: Icons.chat,
-              onTap: () =>
-                  _launchUrl('https://wa.me/34${AppContactInfo.whatsapp2}'),
+              applyFilter: false,
             ),
             const SizedBox(height: 16),
             _ContactCard(
               title: 'Teléfono',
               subtitle: AppContactInfo.phone,
               icon: Icons.phone,
+              color: Colors.brown,
               onTap: () => _launchUrl('tel:+34${AppContactInfo.phone}'),
             ),
             const SizedBox(height: 16),
@@ -63,6 +60,7 @@ class ContactScreen extends StatelessWidget {
               title: 'Email (Información)',
               subtitle: AppContactInfo.emailInfo,
               icon: Icons.email,
+              color: Colors.red.shade300,
               onTap: () => _launchUrl('mailto:${AppContactInfo.emailInfo}'),
             ),
             const SizedBox(height: 16),
@@ -70,7 +68,20 @@ class ContactScreen extends StatelessWidget {
               title: 'Email (Pedidos)',
               subtitle: AppContactInfo.emailPedidos,
               icon: Icons.email_outlined,
+              color: Colors.red.shade300,
               onTap: () => _launchUrl('mailto:${AppContactInfo.emailPedidos}'),
+            ),
+            const SizedBox(height: 24),
+            // Ubicación de la oficina
+            _ContactCard(
+              title: 'Ubicación Oficina',
+              subtitle: 'C/Felipe Moya 48 03202 Elche',
+              icon: Icons.location_on,
+              color: Colors.white,
+              backgroundColor: AppColors.primary,
+              onTap: () => _launchUrl(
+                'https://www.google.com/maps/search/?api=1&query=Calle+Felipe+Moya+48+Elche',
+              ),
             ),
             const SizedBox(height: 32),
             const Text(
@@ -111,14 +122,22 @@ class ContactScreen extends StatelessWidget {
 class _ContactCard extends StatelessWidget {
   final String title;
   final String subtitle;
-  final IconData icon;
+  final IconData? icon;
+  final String? iconPath;
+  final Color color;
+  final Color? backgroundColor;
   final VoidCallback onTap;
+  final bool applyFilter;
 
   const _ContactCard({
     required this.title,
     required this.subtitle,
-    required this.icon,
+    this.icon,
+    this.iconPath,
+    required this.color,
+    this.backgroundColor,
     required this.onTap,
+    this.applyFilter = true,
   });
 
   @override
@@ -129,7 +148,7 @@ class _ContactCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.surface,
+          color: backgroundColor ?? Theme.of(context).colorScheme.surface,
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
@@ -144,10 +163,19 @@ class _ContactCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppColors.primary.withValues(alpha: 0.1),
+                color: backgroundColor != null
+                    ? Colors.white.withAlpha(40)
+                    : color.withAlpha(25),
                 shape: BoxShape.circle,
               ),
-              child: Icon(icon, color: AppColors.primary),
+              child: iconPath != null
+                  ? Image.asset(
+                      iconPath!,
+                      width: 24,
+                      height: 24,
+                      color: applyFilter ? color : null,
+                    )
+                  : Icon(icon, color: color),
             ),
             const SizedBox(width: 16),
             Expanded(
@@ -156,14 +184,28 @@ class _ContactCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: backgroundColor != null ? Colors.white : null,
+                    ),
                   ),
                   const SizedBox(height: 4),
-                  Text(subtitle, style: TextStyle(color: Colors.grey.shade600)),
+                  Text(
+                    subtitle,
+                    style: TextStyle(
+                      color: backgroundColor != null
+                          ? Colors.white70
+                          : Colors.grey.shade600,
+                    ),
+                  ),
                 ],
               ),
             ),
-            const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
+            Icon(
+              Icons.arrow_forward_ios,
+              size: 16,
+              color: backgroundColor != null ? Colors.white70 : Colors.grey,
+            ),
           ],
         ),
       ),
