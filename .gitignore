@@ -54,3 +54,4 @@ key.properties
 google-services.json
 GoogleService-Info.plist
 *.hprof
+lib/firebase_options.dart

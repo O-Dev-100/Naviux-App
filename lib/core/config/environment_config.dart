@@ -16,5 +16,10 @@ class EnvironmentConfig {
   static String get captchaSiteKey => dotenv.env['CAPTCHA_SITE_KEY'] ?? '6Lfq0MYsAAAAAEu1jGtn1Thu7dxXwvW-nluoqNye';
   static String get captchaSecretKey => dotenv.env['CAPTCHA_SECRET_KEY'] ?? '6Lfq0MYsAAAAAKq8vJ8vJ8vJ8vJ8vJ8vJ8vJ8vJ';
 
-  static String get removeBgApiKey => dotenv.env['REMOVE_BG_API_KEY'] ?? 'TXF66hyoYhbnb8cfDbp5yagh';
+  static String get removeBgApiKey => dotenv.env['REMOVE_BG_API_KEY'] ?? '';
+
+  // Firebase
+  static String get firebaseWebApiKey => dotenv.env['FIREBASE_WEB_API_KEY'] ?? '';
+  static String get firebaseAndroidApiKey => dotenv.env['FIREBASE_ANDROID_API_KEY'] ?? '';
+  static String get firebaseIosApiKey => dotenv.env['FIREBASE_IOS_API_KEY'] ?? '';
 }
