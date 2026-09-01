@@ -38,11 +38,13 @@ class NaviuxApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(appRouterProvider);
+    final locale = ref.watch(localeNotifierProvider);
 
     return MaterialApp.router(
       title: 'Nx Naviux',
       theme: AppTheme.lightTheme,
       themeMode: ThemeMode.light,
+      locale: locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       routerConfig: router,

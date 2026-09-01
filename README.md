@@ -65,4 +65,4 @@ REMOVE_BG_API_KEY=tu_key_remove_bg
 
 ## ⚖️ Licencia y Propiedad
 
-© 2026 **Nx Naviux®**. Todos los derechos reservados. El código fuente y los activos visuales de este proyecto son propiedad privada de Naviux Eyewear S.L. y su uso no autorizado está estrictamente prohibido.
+© 2026 **Nx Naviux®**. Todos los derechos reservados. El código fuente y los activos visuales de este proyecto son propiedad privada de Naviux World S.L. y su uso no autorizado está estrictamente prohibido.

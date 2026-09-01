@@ -60,7 +60,7 @@ class PdfInvoiceService {
                   pw.Column(
                     crossAxisAlignment: pw.CrossAxisAlignment.end,
                     children: [
-                      pw.Text('Naviux Eyewear S.L.', style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+                      pw.Text('Naviux World S.L.', style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
                       pw.Text('Calle Falsa 123'),
                       pw.Text('Madrid, 28000'),
                       pw.Text('CIF: B12345678'),
